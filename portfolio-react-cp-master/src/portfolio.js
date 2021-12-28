@@ -12,23 +12,24 @@ const greeting = {
   username: "Mailing Delgado",
   title: "Hi all, I'm Mailing",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web and Mobile applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "Full Stack Software Developer 🚀 having an experience of designing and building Web and Mobile applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1c0Xy-9A1ETPCenF2nedGZzDiL45Oc6Qf/view?usp=sharing",
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://drive.google.com/file/d/13bRb4WW2MNCC__7h7C_4I6U-uYlxol6o/view?usp=sharing",
+  displayGreeting: true// Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
   github: "https://github.com/MailingDelgadoMedina/",
-  // linkedin: "https://www.linkedin.com/in/",
+ linkedin: "https://www.linkedin.com/in/mailing-delgado-medina/",
   gmail: "mailingdelgadomedina.it@gmail.com",
+  dev: "https://dev.to/mailingdelgadomedina",
   // gitlab: "https://gitlab.com/",
   // facebook: "https://www.facebook.com/",
   //medium: "https://medium.com/@davidrakosi",
-  stackoverflow: "https://stackoverflow.com/users/13617304/mailing-delgado?tab=profile",
+  //stackoverflow: "https://stackoverflow.com/users/13617304/mailing-delgado?tab=profile",
  // instagram: 'https://www.instagram.com/davidrakosi/',
   //twitter: 'https://twitter.com/davidrakosi_',
   display: true // Set true to display this section, defaults to false
@@ -45,7 +46,7 @@ const skillsSection = {
     ),
     emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Integration of third party services such as Firebase"
     )
   ],
 
@@ -86,7 +87,55 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "firebase",
       fontAwesomeClassname: "fas fa-fire"
+    },
+    {
+      skillName: "NEXT.JS",
+      fontAwesomeClassname: "fas fa-fire"
+    },
+    {
+      skillName: "Tailwind",
+      fontAwesomeClassname: "fas fa-fire"
     }
+  ],
+  display: true // Set false to hide this section, defaults to true
+};
+
+
+// Some big projects you have worked on
+
+const bigProjects = {
+  title: "Big Projects",
+  subtitle: "Projects",
+  projects: [
+    {
+      image: require("./assets/images/borizon.png"),
+      projectName: "Borizon (amazon clone)",
+      projectDesc: "This is an amazon clone build with React.JS as a frontend, for backend I used Express, Axios, Firebase and for payments processing I used stripe",
+      footerLink: [
+        {
+         name: "Visit Website",
+          url: "http://www.boriac.com/"
+        }
+        //  you can add extra buttons here.
+      ]
+    }
+    ,
+    {
+      image: require("./assets/images/weather.png"),
+      projectName: "My Weather App",
+      projectDesc: "This Project is Build in Plain HTML, CSS and Vanilla Javascript",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://weatherapptiempo.netlify.app/"
+        },
+        {
+          name: "View Code",
+          url: "https://github.com/MailingDelgadoMedina/weather"
+        }
+      ]
+    }
+    
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -94,18 +143,17 @@ https://fontawesome.com/icons?d=gallery */
 // Education Section
 
 const educationInfo = {
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Broward College",
-      logo: require("./assets/images/broward.png"),
-      subHeader: "Certifications COMPTIA A+ S+ N+",
-      duration: "May 2020 - Present",
-      desc: "",
-      descBullets: [
-        ""
-      ]
+      schoolName: "Nova Southeastern University, College of Computing and Engineering",
+      logo: require("./assets/images/nova.png"),
+      subHeader: "MS Information Technology and Application Development",
+      duration: "May 2021 - Present",
+      
+      // descBullets: [""]
     },
+   
     {
       schoolName: "Southern Careers Institute, Powered by WOZ-U",
       logo: require("./assets/images/Sci.jpg"),
@@ -113,8 +161,19 @@ const educationInfo = {
       duration: "May 2020 - March 2021",
       desc:
         "Took courses about Software Development, Web Applications, Front End, Back End, Databases, ...",
-      descBullets: [""]
+      // descBullets: [""]
+    },
+    {
+      schoolName: "National University College",
+      logo: require("./assets/images/nuc.png"),
+      subHeader: "BS Network Technology and Applicatin Development",
+      duration: "March 2015 - June 2019",
+      desc: "",
+      // descBullets: [
+      //   ""
+      // ]
     }
+ 
   ]
 };
 
@@ -130,11 +189,11 @@ const techStack = {
     {
       Stack: "Backend",
       progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "90%"
     }
+    // {
+    //   Stack: "Programming",
+    //   progressPercentage: "90%"
+    // }
   ],
   displayCodersrank: true // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -145,10 +204,26 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Software Developer Mentor",
+      company: "WOZ-U EDUCATION LLC.",
+      companylogo: "https://coursereport-production.imgix.net/uploads/school/logo/614/original/246x0w.jpg?w=200&h=200",
+      date: "November 2021 – Present",
+      desc:
+        "Directly in charge of the progress of 30-50+ students at one time. Responsible for mentoring,guiding, and teaching students in their current program. Lead video calls with students for weekly code reviews to explain, teach, and provide real-life examples of how different aspects of programming works. Monitors Slack channel to help and advise any students that have questions regarding their course work or other related topics. Provides feedback on the courses in the program and how we can implement our code examples in a better fashion. Reports to our Senior mentors and instructors for support and our ongoing individual development."
+    },
+    {
+      role: "Code Mentor (Live Code Streaming)",
+      company: "ProgramandoConMei https://www.twitch.tv/programandoconmei",
+       companylogo: require("./assets/images/LogoForMobile.png"),
+      date: "September 2021 – Present",
+      desc:
+        "I live code almost everyday. I help others understand the basics of Javascript and new technologies. I answer questions related to JS Stack. I help the hispanic community that doesn't know english to learn about web development and its concepts."
+    },
+    {
       role: "Remote Full Stack Developer (Volunteer Teacher Assistant",
       company: "NUC (Remote)",
       companylogo: require("./assets/images/nuc.png"),
-      date: "Aug 2019 – Present",
+      date: "Aug 2016– Present",
       desc:
         "Assist university students with Jnal proOect review, quality assurance and troubleshooting code rendering across multiple desktops and mobile devices. Assisting students with planning site designs, functionality, debugging and navigation. Test applications for responsiveness on any device. Assist students with making sure all parts of the full stack cycle are working together like front end, back end, and database.",
       descBullets: [
@@ -156,22 +231,8 @@ const workExperiences = {
         
       ]
     },
-    {
-      role: "Customer Service Representative",
-      company: "Teleperformance USA Inc.",
-      companylogo: require("./assets/images/Teleperformance.png"),
-      date: "August 2020 – March 2021",
-      desc:
-        "Assist members with premium payments and processing, and change drug prescription plans for Medicare part D. Search for information on medication and copayments in-network pharmacies. Fax Coverage Determinations, Tier exceptions, and Redeterminations to Drs. offces. Document highly sensitive information, escalating calls and Filling grievances."
-    },
-    {
-      role: "Software Development (Volunteer Teacher Assistant)",
-      company: "NUC (Campus)",
-       companylogo: require("./assets/images/nuc.png"),
-      date: "June 2016 – March 2019",
-      desc:
-        "Assist university students with Jnal proOect review, quality assurance and troubleshooting code rendering across multiple desktops and mobile devices. Assisting students with planning site designs, functionality, debugging and navigation. Test applications, responsiveness for any device. Assist students with making sure all parts of the full stack cycle are working together like front end, back end, and    database."
-    }
+   
+    
   ]
 };
 
@@ -185,40 +246,7 @@ const openSource = {
   display: false // Set false to hide this section, defaults to true
 };
 
-// Some big projects you have worked on
 
-const bigProjects = {
-  title: "Big Projects",
-  subtitle: "Projects",
-  projects: [
-    {
-      image: require("./assets/images/CL.png"),
-      projectName: "Coded Lashes",
-      projectDesc: "LApplication built for an Aesthetics parlor for a real customer who needed a website for their business. Application allows customers to sign, book appointments, instant message and view services. Technologies used MySLQ, ReactJs, Bootstrap and React/Bootstrap, Chatra, Axios, Postman, and Photoshop",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "fA"
-        }
-        //  you can add extra buttons here.
-      ]
-    }
-    /*
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: ""
-        }
-      ]
-    }
-    */ 
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
 
 // Achievement Section
 // Include certificates, talks etc
@@ -287,24 +315,29 @@ const achievementSection = {
 const blogSection = {
   title: "Blogs",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
+    "Sharing knowledge and tips.",
 
   blogs: [
     {
       url:
-        "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
+        "https://dev.to/mailingdelgadomedina/guia-basica-de-comandos-mas-utilizados-en-cli-interfaz-de-linea-de-comandos-en-mac-y-windows-pn2",
+      title: "Guia básica de comandos más utilizados en CLI Interfaz de Línea de comandos en Mac y Windows",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        "Basic command guide often used in CLI (Command Line Interface) in Mac and Windows"
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
+      url: "https://dev.to/mailingdelgadomedina/como-instalar-gitbash-en-windows-10-4o0e",
+      title: "Como Instalar GitBash en Windows 10.",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+        "Guide of how to install GitBash on Windows 10"
+    },
+    {
+      url: "https://dev.to/mailingdelgadomedina/imposter-syndrome-390j",
+      title: "My Personal Opinion Of What Triggers Imposter Syndrome And What You Should Know When Starting To Code",
+      
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
