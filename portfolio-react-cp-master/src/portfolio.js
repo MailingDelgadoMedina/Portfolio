@@ -12,10 +12,10 @@ const greeting = {
   username: "Mailing Delgado",
   title: "Hi all, I'm Mailing",
   subTitle: emoji(
-    "Full Stack Software Developer 🚀 having an experience of designing and building Web and Mobile applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "Full Stack Software Developer 🚀 having an experience of designing and building Web and Mobile applications in JavaScript Stack like NEXT.JS / Reactjs / Nodejs and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1aiFBOWYM6LynDjYgoZ2AaWK2BMwf5sZ0/view",
+    "https://drive.google.com/file/d/130KQsyUgQQR2or_ayopHB8o6E7G_03b2/view",
   displayGreeting: true// Set false to hide this section, defaults to true
 };
 
@@ -101,12 +101,25 @@ https://fontawesome.com/icons?d=gallery */
 };
 
 
-// Some big projects you have worked on
+// Some big projects you have worked on https://jojonaileditsalon.com/
 
 const bigProjects = {
   title: "Big Projects",
   subtitle: "Projects",
   projects: [
+    {
+      image: require("./assets/images/My App.PNG"),
+      projectName: "Jojo Nailed It! (Nail Salon)",
+      projectDesc: "This is a web application which provides the following services to a nail salon: booking services to  their customers, shares prices, policy, gallery and contact. Technologies used NEXT.JS, Tailwind, React, Firebase, Calendly as a booking services, Netlify.  ",
+      footerLink: [
+        {
+         name: "Visit Website",
+          url: "https://jojonaileditsalon.com/"
+        }
+        //  you can add extra buttons here.
+      ]
+    }
+    ,
     {
       image: require("./assets/images/borizon.png"),
       projectName: "Borizon (amazon clone)",
